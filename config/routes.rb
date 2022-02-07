@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     concerns :api_base
   end
   resources :users, only:  :create
-  post 'auth/login', to: 'authentication#authenticate'
+  post 'auth/login', to: 'authentication#create'
   post 'signup', to: 'users#create'
   root to: 'v1/doctors#index'
 
